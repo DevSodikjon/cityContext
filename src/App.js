@@ -1,11 +1,13 @@
 import "./App.css";
-import Home from "./Components/home/Home";
+import Register from "./Components/Auth/Register";
+// import Login from "./Components/Auth/Login";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Home />
+        <Register />
+        {/* <Login /> */}
       </header>
     </div>
   );
