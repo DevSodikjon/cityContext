@@ -1,5 +1,6 @@
 import { useState } from "react";
 import firebase from "../firebase";
+import { Link } from "react-router-dom";
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,6 +22,7 @@ const Register = () => {
       await firebase.auth().createUserWithEmailAndPassword(email, password);
     } catch (error) {
       setError(error);
+      console.log(error);
     }
   };
 
@@ -59,6 +61,7 @@ const Register = () => {
         <button type="submit">Register</button>
       </form>
       <span>Already have an account</span>
+      <Link to="/login">Login</Link>
     </div>
   );
 };
